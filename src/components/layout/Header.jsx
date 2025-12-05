@@ -45,13 +45,13 @@ const Header = () => {
     ];
 
     const servicesList = [
-        "Commercial Stretcher Transfer",
-        "Disaster Management",
-        "ECMO Transfers",
-        "Neonatal and Pediatric Transfers",
-        "Organ Transfers",
-        "Planned Air Transfers",
-        "ICU Air Ambulance"
+        { name: "Commercial Stretcher Transfer", id: "commercial-stretcher" },
+        { name: "Disaster Management", id: "disaster-management" },
+        { name: "ECMO Transfers", id: "ecmo-transfers" },
+        { name: "Neonatal and Pediatric Transfers", id: "neonatal-pediatric" },
+        { name: "Organ Transfers", id: "organ-transfers" },
+        { name: "Planned Air Transfers", id: "planned-transfers" },
+        { name: "ICU Air Ambulance", id: "icu-air-ambulance" }
     ];
 
     const navLinks = [
@@ -192,11 +192,11 @@ const Header = () => {
                                                 <div className="grid grid-cols-3 gap-x-8 gap-y-4">
                                                     {servicesList.map((service) => (
                                                         <Link
-                                                            key={service}
-                                                            to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                                            key={service.id}
+                                                            to={`/services#${service.id}`}
                                                             className="text-sm text-gray-800 hover:text-red-600 transition-colors font-medium"
                                                         >
-                                                            {service}
+                                                            {service.name}
                                                         </Link>
                                                     ))}
                                                 </div>
@@ -230,11 +230,10 @@ const Header = () => {
                     {/* Mobile Controls (CTA Only) */}
                     <div className="xl:hidden flex items-center">
                         <a href="tel:1800121911911"
-                            className="flex items-center bg-primary text-white px-4 py-2 rounded-full shadow-md hover:bg-primary-dark transition-colors font-bold text-sm"
+                            className="flex items-center justify-center bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary-dark transition-colors"
                             aria-label="Call Emergency"
                         >
-                            <Phone className="h-4 w-4 mr-2 animate-pulse" />
-                            1800-121-911-911
+                            <Phone className="h-5 w-5 animate-pulse" />
                         </a>
                         <button
                             className="ml-4 p-2 text-gray-600 hover:text-red-600 focus:outline-none"
@@ -320,12 +319,12 @@ const Header = () => {
                                                     <div className="space-y-2">
                                                         {servicesList.map((service) => (
                                                             <Link
-                                                                key={service}
-                                                                to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                key={service.id}
+                                                                to={`/services#${service.id}`}
                                                                 className="block text-sm text-gray-600 hover:text-red-600 py-1"
                                                                 onClick={() => setIsMenuOpen(false)}
                                                             >
-                                                                {service}
+                                                                {service.name}
                                                             </Link>
                                                         ))}
                                                     </div>

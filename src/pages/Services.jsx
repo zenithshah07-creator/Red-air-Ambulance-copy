@@ -70,6 +70,18 @@ const Services = () => {
             ]
         },
         {
+            id: 'disaster-management',
+            title: 'Disaster Management',
+            icon: <Shield className="h-12 w-12 text-primary" />,
+            description: 'Rapid response and evacuation services during natural disasters or mass casualty incidents, coordinating with government and relief agencies.',
+            features: [
+                'Mass casualty evacuation',
+                'Coordination with relief agencies',
+                'Rapid deployment capability',
+                'Triage and stabilization'
+            ]
+        },
+        {
             id: 'commercial-stretcher',
             title: 'Commercial Stretcher Transfer',
             icon: <Shield className="h-12 w-12 text-primary" />,
@@ -116,7 +128,7 @@ const Services = () => {
             <div className="container mx-auto px-4 py-16">
                 <div className="space-y-16">
                     {services.map((service, index) => (
-                        <div key={service.id} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}>
+                        <div id={service.id} key={service.id} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center scroll-mt-28`}>
                             <div className="lg:w-1/2">
                                 <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary">
                                     <div className="mb-6 bg-red-50 w-20 h-20 rounded-full flex items-center justify-center">
