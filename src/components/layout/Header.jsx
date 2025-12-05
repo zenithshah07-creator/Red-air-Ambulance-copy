@@ -236,13 +236,20 @@ const Header = () => {
                             <Phone className="h-4 w-4 mr-2 animate-pulse" />
                             1800-121-911-911
                         </a>
+                        <button
+                            className="ml-4 p-2 text-gray-600 hover:text-red-600 focus:outline-none"
+                            onClick={toggleMenu}
+                            aria-label="Toggle Menu"
+                        >
+                            {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+                        </button>
                     </div>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-lg h-[calc(100vh-101px)] overflow-y-auto pb-20">
+                <div className="xl:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-lg h-[calc(100vh-101px)] overflow-y-auto pb-20">
                     <div className="px-4 pt-4 pb-6 space-y-2">
                         {navLinks.map((link) => (
                             <div key={link.name} className="border-b border-gray-50 last:border-none">
