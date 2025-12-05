@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-100 pt-16 pb-8 font-sans">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 h-4xl">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 border-b border-gray-300 pb-12">
           {/* Brand Column */}
@@ -136,9 +136,10 @@ const Footer = () => {
 
         <div className="border-t border-gray-300 mt-12 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} Red Air Ambulance. All Rights Reserved.
+            © {currentYear} Red Air Ambulance. All Rights Reserved. Made By Jenish Shah
           </p>
         </div>
+
       </div>
     </footer>
   );
