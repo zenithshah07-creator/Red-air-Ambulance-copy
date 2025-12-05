@@ -7,8 +7,16 @@ const Header = () => {
     const [isPresenceOpen, setIsPresenceOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('india'); // 'india', 'international', 'escorts'
+    const [mobileExpanded, setMobileExpanded] = useState({});
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+    const toggleMobileExpand = (name) => {
+        setMobileExpanded(prev => ({
+            ...prev,
+            [name]: !prev[name]
+        }));
+    };
 
     const indiaServices = [
         "Ahmedabad", "Amritsar", "Bangalore",
@@ -219,8 +227,14 @@ const Header = () => {
                         </a>
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <div className="lg:hidden flex items-center">
+                    {/* Mobile Controls (CTA + Menu) */}
+                    <div className="lg:hidden flex items-center space-x-4">
+                        <a href="tel:1800121911911"
+                            className="flex items-center bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary-dark transition-colors"
+                            aria-label="Call Emergency"
+                        >
+                            <Phone className="h-5 w-5 animate-pulse" />
+                        </a>
                         <button
                             onClick={toggleMenu}
                             className="text-secondary hover:text-primary focus:outline-none"
@@ -233,17 +247,100 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-lg h-screen overflow-y-auto pb-20">
+                <div className="lg:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full shadow-lg h-[calc(100vh-101px)] overflow-y-auto pb-20">
                     <div className="px-4 pt-4 pb-6 space-y-2">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                className="block px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-red-50 border-b border-gray-50"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {link.name}
-                            </Link>
+                            <div key={link.name} className="border-b border-gray-50 last:border-none">
+                                {link.hasDropdown ? (
+                                    <>
+                                        <button
+                                            onClick={() => toggleMobileExpand(link.name)}
+                                            className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-red-50 focus:outline-none"
+                                        >
+                                            {link.name}
+                                            <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${mobileExpanded[link.name] ? 'transform rotate-180' : ''}`} />
+                                        </button>
+                                        {mobileExpanded[link.name] && (
+                                            <div className="bg-gray-50 px-4 py-2 space-y-2">
+                                                {link.type === 'presence' && (
+                                                    <div className="space-y-4">
+                                                        {/* India */}
+                                                        <div>
+                                                            <h4 className="font-bold text-sm text-gray-700 mb-2 uppercase tracking-wider">India</h4>
+                                                            <div className="grid grid-cols-2 gap-2">
+                                                                {indiaServices.map((city) => (
+                                                                    <Link
+                                                                        key={city}
+                                                                        to={`/presence/india/${city.toLowerCase()}`}
+                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        onClick={() => setIsMenuOpen(false)}
+                                                                    >
+                                                                        {city}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                        {/* International */}
+                                                        <div>
+                                                            <h4 className="font-bold text-sm text-gray-700 mb-2 uppercase tracking-wider">International</h4>
+                                                            <div className="grid grid-cols-2 gap-2">
+                                                                {internationalServices.map((country) => (
+                                                                    <Link
+                                                                        key={country}
+                                                                        to={`/presence/international/${country.toLowerCase()}`}
+                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        onClick={() => setIsMenuOpen(false)}
+                                                                    >
+                                                                        {country}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                        {/* Medical Escorts */}
+                                                        <div>
+                                                            <h4 className="font-bold text-sm text-gray-700 mb-2 uppercase tracking-wider">Medical Escorts</h4>
+                                                            <div className="grid grid-cols-2 gap-2">
+                                                                {medicalEscorts.map((place) => (
+                                                                    <Link
+                                                                        key={place}
+                                                                        to={`/presence/medical-escort/${place.toLowerCase()}`}
+                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        onClick={() => setIsMenuOpen(false)}
+                                                                    >
+                                                                        {place}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                                {link.type === 'services' && (
+                                                    <div className="space-y-2">
+                                                        {servicesList.map((service) => (
+                                                            <Link
+                                                                key={service}
+                                                                to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                className="block text-sm text-gray-600 hover:text-red-600 py-1"
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                            >
+                                                                {service}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        )}
+                                    </>
+                                ) : (
+                                    <Link
+                                        to={link.path}
+                                        className="block px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-red-50"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )}
+                            </div>
                         ))}
                         <a
                             href="tel:1800121911911"
