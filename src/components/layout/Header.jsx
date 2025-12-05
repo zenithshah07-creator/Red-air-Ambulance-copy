@@ -86,7 +86,7 @@ const Header = () => {
                     </Link>
 
                     {/*  Desktop Navigation */}
-                    <nav className="hidden lg:flex space-x-8">
+                    <nav className="hidden xl:flex space-x-8">
                         {navLinks.map((link) => (
                             <div key={link.name} className="relative group">
                                 {link.hasDropdown ? (
@@ -216,9 +216,9 @@ const Header = () => {
                     </nav>
 
                     {/* CTA Button */}
-                    <div className="hidden lg:flex items-center">
+                    <div className="hidden xl:flex items-center flex-shrink-0">
                         <a href="tel:1800121911911"
-                            className="flex flex-col items-end group">
+                            className="flex flex-col items-end group whitespace-nowrap">
                             <span className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">24/7 Emergency</span>
                             <div className="flex items-center bg-primary group-hover:bg-primary-dark text-white px-5 py-1 rounded-full font-bold transition-all duration-200 shadow-md">
                                 <Phone className="h-4 w-4 mr-2 animate-pulse" />
@@ -227,20 +227,15 @@ const Header = () => {
                         </a>
                     </div>
 
-                    {/* Mobile Controls (CTA + Menu) */}
-                    <div className="lg:hidden flex items-center space-x-4">
+                    {/* Mobile Controls (CTA Only) */}
+                    <div className="xl:hidden flex items-center">
                         <a href="tel:1800121911911"
-                            className="flex items-center bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary-dark transition-colors"
+                            className="flex items-center bg-primary text-white px-4 py-2 rounded-full shadow-md hover:bg-primary-dark transition-colors font-bold text-sm"
                             aria-label="Call Emergency"
                         >
-                            <Phone className="h-5 w-5 animate-pulse" />
+                            <Phone className="h-4 w-4 mr-2 animate-pulse" />
+                            1800-121-911-911
                         </a>
-                        <button
-                            onClick={toggleMenu}
-                            className="text-secondary hover:text-primary focus:outline-none"
-                        >
-                            {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-                        </button>
                     </div>
                 </div>
             </div>
