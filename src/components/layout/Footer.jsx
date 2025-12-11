@@ -36,7 +36,7 @@ const Footer = () => {
           <span key={item}>
             <Link
               to={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-              className="hover:text-red-600 hover:underline transition-colors"
+              className="hover:text-primary hover:underline transition-colors"
             >
               {prefix} {item}
             </Link>
@@ -56,23 +56,23 @@ const Footer = () => {
           <div className="col-span-1">
             <Link to="/" className="inline-block mb-4">
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-red-600 tracking-tight leading-none">
-                  RED AIR
+                <span className="text-2xl font-bold text-emergency tracking-tight leading-none">
+                  FLY MEDICAL
                 </span>
-                <span className="text-xl text-gray-600 font-medium tracking-wider">AMBULANCE</span>
+                <span className="text-xl text-charcoal font-medium tracking-wider">AMBULANCE</span>
               </div>
             </Link>
             <p className="text-gray-600 mb-6 text-sm leading-relaxed max-w-xs">
               A Specialised Air Ambulance Service for Comprehensive Patient Transfers.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="bg-red-600 text-white p-2 rounded hover:bg-red-700 transition-colors">
+              <a href="#" className="bg-primary text-white p-2 rounded hover:bg-blue-700 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-red-600 text-white p-2 rounded hover:bg-red-700 transition-colors">
+              <a href="#" className="bg-primary text-white p-2 rounded hover:bg-blue-700 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-red-600 text-white p-2 rounded hover:bg-red-700 transition-colors">
+              <a href="#" className="bg-primary text-white p-2 rounded hover:bg-blue-700 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -80,27 +80,27 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-red-600 font-bold mb-4 text-lg">Quick Links</h3>
+            <h3 className="text-primary font-bold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li><Link to="/media" className="hover:text-red-600">Media Presence</Link></li>
-              <li><Link to="/presence" className="hover:text-red-600">Our Presence</Link></li>
-              <li><Link to="/why-choose-us" className="hover:text-red-600">Why Choose Us</Link></li>
-              <li><Link to="/faqs" className="hover:text-red-600">FAQs</Link></li>
+              <li><Link to="/media" className="hover:text-primary">Media Presence</Link></li>
+              <li><Link to="/presence" className="hover:text-primary">Our Presence</Link></li>
+              <li><Link to="/why-choose-us" className="hover:text-primary">Why Choose Us</Link></li>
+              <li><Link to="/faqs" className="hover:text-primary">FAQs</Link></li>
             </ul>
           </div>
 
           {/* Legal */}
           <div className="col-span-1">
-            <h3 className="text-red-600 font-bold mb-4 text-lg">Legal</h3>
+            <h3 className="text-primary font-bold mb-4 text-lg">Legal</h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li><Link to="/privacy" className="hover:text-red-600">Privacy Policy</Link></li>
-              <li><Link to="/case-studies" className="hover:text-red-600">Case Studies</Link></li>
+              <li><Link to="/privacy" className="hover:text-primary">Privacy Policy</Link></li>
+              <li><Link to="/case-studies" className="hover:text-primary">Case Studies</Link></li>
             </ul>
           </div>
 
           {/* Location */}
           <div className="col-span-1">
-            <h3 className="text-red-600 font-bold mb-4 text-lg">Location</h3>
+            <h3 className="text-primary font-bold mb-4 text-lg">Location</h3>
             <p className="text-sm text-gray-700 leading-relaxed">
               B Block, 6th Floor, Plot 18, iLabs, Opposite InOrbit mall, Madhapur, Hyderabad, Telangana, 500081
             </p>
@@ -111,7 +111,7 @@ const Footer = () => {
         <div className="space-y-8">
           {/* India Services */}
           <div>
-            <h3 className="text-red-600 font-bold mb-2 text-lg">Air Ambulance Services in India</h3>
+            <h3 className="text-primary font-bold mb-2 text-lg">Air Ambulance Services in India</h3>
             <div className="text-xs text-gray-600 leading-relaxed">
               {renderServiceList(indiaServices, "Air Ambulance Services in")}
             </div>
@@ -119,7 +119,7 @@ const Footer = () => {
 
           {/* International Services */}
           <div>
-            <h3 className="text-red-600 font-bold mb-2 text-lg">Air Ambulance Services in International</h3>
+            <h3 className="text-primary font-bold mb-2 text-lg">Air Ambulance Services in International</h3>
             <div className="text-xs text-gray-600 leading-relaxed">
               {renderServiceList(internationalServices, "Air Ambulance Services in")}
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
 
           {/* Medical Escorts */}
           <div>
-            <h3 className="text-red-600 font-bold mb-2 text-lg">Medical Escorts Worldwide</h3>
+            <h3 className="text-primary font-bold mb-2 text-lg">Medical Escorts Worldwide</h3>
             <div className="text-xs text-gray-600 leading-relaxed">
               {renderServiceList(medicalEscorts, "Medical Escort in")}
             </div>
@@ -136,7 +136,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-300 mt-12 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} Red Air Ambulance. All Rights Reserved. Made By Jenish Shah
+            © {currentYear} Fly Medical Ambulance. All Rights Reserved. Made By Jenish Shah
           </p>
         </div>
 

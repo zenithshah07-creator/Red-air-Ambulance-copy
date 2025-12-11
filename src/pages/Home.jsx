@@ -56,7 +56,7 @@ function Home() {
     const trustContent = {
         Expertise: [
             {
-                icon: <Stethoscope className="w-12 h-12 text-red-600 mb-4" />,
+                icon: <Stethoscope className="w-12 h-12 text-primary mb-4" />,
                 title: "Expert Medical Team",
                 description:
                     "Our highly skilled medical team includes Doctors with specialized training and Fellowships in Aviation Medicine. Their deep understanding of in-flight medical care ensures that patients receive the best possible treatment, even at 30,000 feet. With experience in managing critical cases, they offer expert care from takeoff to landing.",
@@ -108,7 +108,7 @@ function Home() {
         ],
         "Hospital Partnerships": [
             {
-                icon: <Cpu className="w-12 h-12 text-red-600 mb-4" />,
+                icon: <Cpu className="w-12 h-12 text-primary mb-4" />,
                 title: "Advanced Technology",
                 description:
                     "We utilize cutting-edge technology to streamline coordination between hospitals, air ambulance services, and medical ground teams. Our real-time tracking and communication systems enable seamless collaboration, allowing medical teams to prepare ahead of time, reducing critical wait periods and ensuring the patient's timely transfer. This integration helps optimize the entire emergency response process, from dispatch to hospital admission.",
@@ -166,10 +166,10 @@ function Home() {
                     <div className="relative md:absolute inset-0 z-20 flex flex-col md:flex-row items-center justify-center text-left px-4 container mx-auto py-20 md:py-0">
                         {/* Left: Text */}
                         <div className="flex-1 mb-8 md:mb-0 md:mr-12 pl-4 md:pl-8">
-                            <h1 className="text-red-600 text-3xl md:text-5xl font-bold font-sans mb-6 leading-tight drop-shadow-sm">
+                            <h1 className="text-primary text-3xl md:text-5xl font-bold font-sans mb-6 leading-tight drop-shadow-sm">
                                 Advanced Life Support <br /> For Critical Conditions:
                                 <br />
-                                <span className="text-red-700">ECMO & Ventilator Cases</span>
+                                <span className="text-primary-dark">ECMO & Ventilator Cases</span>
                             </h1>
                             <p className="text-gray-800 text-lg md:text-xl max-w-2xl mb-8 font-medium leading-relaxed">
                                 We specialize in handling high-risk medical cases requiring
@@ -186,7 +186,7 @@ function Home() {
                         </div>
                         {/* Right: Form */}
                         <div className="flex-1 flex justify-end pr-4 md:pr-8">
-                            <div className="bg-red-600 rounded-3xl shadow-2xl p-8 max-w-md w-full relative overflow-hidden">
+                            <div className="bg-primary rounded-3xl shadow-2xl p-8 max-w-md w-full relative overflow-hidden">
                                 <div className="relative z-10">
                                     <h2 className="text-xl font-bold mb-6 text-white text-center leading-snug">
                                         Upon filling the details, you will receive a call within 5 seconds
@@ -204,7 +204,7 @@ function Home() {
                                                 id="name"
                                                 name="name"
                                                 required
-                                                className="w-full px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-red-800 text-gray-900 placeholder-gray-500"
+                                                className="w-full px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-primary-dark text-gray-900 placeholder-gray-500"
                                                 placeholder="Full Name"
                                             />
                                         </div>
@@ -214,7 +214,7 @@ function Home() {
                                                 id="contact"
                                                 name="contact"
                                                 required
-                                                className="w-full px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-red-800 text-gray-900 placeholder-gray-500"
+                                                className="w-full px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-primary-dark text-gray-900 placeholder-gray-500"
                                                 placeholder="Phone No"
                                             />
                                         </div>
@@ -243,12 +243,12 @@ function Home() {
                             />
                         </div>
                         {/* Right: Text */}
-                        <div className="flex-1 border border-gray-300 rounded-xl p-6 bg-red-300 shadow-lg">
-                            <h1 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
+                        <div className="flex-1 border border-gray-300 rounded-xl p-6 bg-blue-100 shadow-lg">
+                            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                 Who We Are
                             </h1>
                             <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-                                At RED Air Ambulance, we are a patient-first organization
+                                At Fly Medical Ambulance, we are a patient-first organization
                                 committed to delivering swift, reliable, and advanced medical
                                 solutions when every second counts. As leaders in the
                                 industry, we provide state-of-the-art air ambulance services
@@ -273,7 +273,7 @@ function Home() {
                 <section className="py-20 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                                 Our Services
                             </h2>
                             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -373,7 +373,7 @@ function Home() {
                 {/* Our Partnered Hospitals */}
                 <section className="py-16 bg-white">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-600">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                             Our Partnered Hospitals
                         </h2>
                         <p className="text-gray-600 max-w-4xl mx-auto text-lg mb-12">
@@ -435,8 +435,8 @@ function Home() {
                 {/* Why Trust Red Air Ambulance Section */}
                 <section className="py-20 bg-gray-100">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-red-600">
-                            Why Trust RED Air Ambulance?
+                        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-primary">
+                            Why Trust Fly Medical Ambulance?
                         </h2>
 
                         <div className="flex flex-col lg:flex-row gap-8">
@@ -447,7 +447,7 @@ function Home() {
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
                                         className={`text-left px-6 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between ${activeTab === tab
-                                            ? "bg-red-600 text-white shadow-lg"
+                                            ? "bg-primary text-white shadow-lg"
                                             : "bg-white text-gray-700 hover:bg-gray-50 shadow-sm"
                                             }`}
                                     >
@@ -513,6 +513,7 @@ function Home() {
                 </section>
                 <EnquiryFormSection />
             </div>
+
         </>
     );
 }

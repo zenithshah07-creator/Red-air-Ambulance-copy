@@ -78,8 +78,8 @@ const Header = () => {
                         </div>
                         <div className=" flex flex-col ">
                             <span className="text-2xl font-bold text-secondary-dark tracking-tight leading-none">
-                                <span className="text-red-600" style={{ height: '20px', display: 'inline-block', lineHeight: '40px' }}>RED</span>
-                                <span className="text-primary">AIR</span>
+                                <span className="text-emergency" style={{ height: '20px', display: 'inline-block', lineHeight: '40px' }}>FLY</span>
+                                <span className="text-primary">MEDICAL</span>
                             </span>
                             <span className="text-xs text-gray-500 font-medium tracking-wider">AMBULANCE</span>
                         </div>
@@ -92,7 +92,7 @@ const Header = () => {
                                 {link.hasDropdown ? (
                                     <>
                                         <button
-                                            className="text-red-600 hover:text-red-300 font-bold transition-colors duration-200 text-xs uppercase tracking-wide flex items-center h-full py-8"
+                                            className="text-primary hover:text-accent font-bold transition-colors duration-200 text-xs uppercase tracking-wide flex items-center h-full py-8"
                                             onMouseEnter={() => {
                                                 if (link.type === 'presence') setIsPresenceOpen(true);
                                                 if (link.type === 'services') setIsServicesOpen(true);
@@ -105,7 +105,7 @@ const Header = () => {
                                         {/* Our Presence Dropdown */}
                                         {link.type === 'presence' && isPresenceOpen && (
                                             <div
-                                                className="absolute left-0 top-[80px] w-[900px] bg-white shadow-2xl rounded-sm border-t-4 border-red-600 z-50"
+                                                className="absolute left-0 top-[80px] w-[900px] bg-white shadow-2xl rounded-sm border-t-4 border-primary z-50"
                                                 onMouseEnter={() => setIsPresenceOpen(true)}
                                                 onMouseLeave={() => setIsPresenceOpen(false)}
                                             >
@@ -114,19 +114,19 @@ const Header = () => {
                                                     <div className="w-1/3 bg-white py-4 pr-2">
                                                         <div className="flex flex-col space-y-2">
                                                             <button
-                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'india' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
+                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'india' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                                                                 onMouseEnter={() => setActiveTab('india')}
                                                             >
                                                                 Air Ambulance Services in India
                                                             </button>
                                                             <button
-                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'international' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
+                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'international' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                                                                 onMouseEnter={() => setActiveTab('international')}
                                                             >
                                                                 Air Ambulance Services in International
                                                             </button>
                                                             <button
-                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'escorts' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
+                                                                className={`text-left px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'escorts' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                                                                 onMouseEnter={() => setActiveTab('escorts')}
                                                             >
                                                                 Medical Escorts Worldwide
@@ -142,7 +142,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={city}
                                                                         to={`/presence/india/${city.toLowerCase()}`}
-                                                                        className="text-xs text-gray-700 hover:text-red-600 transition-colors flex items-center"
+                                                                        className="text-xs text-gray-700 hover:text-primary transition-colors flex items-center"
                                                                     >
                                                                         Air Ambulance Services in {city}
                                                                     </Link>
@@ -156,7 +156,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={country}
                                                                         to={`/presence/international/${country.toLowerCase()}`}
-                                                                        className="text-xs text-gray-700 hover:text-red-600 transition-colors flex items-center"
+                                                                        className="text-xs text-gray-700 hover:text-primary transition-colors flex items-center"
                                                                     >
                                                                         Air Ambulance Services in {country}
                                                                     </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={place}
                                                                         to={`/presence/medical-escort/${place.toLowerCase()}`}
-                                                                        className="text-xs text-gray-700 hover:text-red-600 transition-colors flex items-center"
+                                                                        className="text-xs text-gray-700 hover:text-primary transition-colors flex items-center"
                                                                     >
                                                                         Medical Escort in {place}
                                                                     </Link>
@@ -185,7 +185,7 @@ const Header = () => {
                                         {/* Services Dropdown */}
                                         {link.type === 'services' && isServicesOpen && (
                                             <div
-                                                className="absolute left-0 top-[80px] w-[900px] bg-white shadow-2xl rounded-sm border-t-4 border-red-600 z-50 p-8"
+                                                className="absolute left-0 top-[80px] w-[900px] bg-white shadow-2xl rounded-sm border-t-4 border-primary z-50 p-8"
                                                 onMouseEnter={() => setIsServicesOpen(true)}
                                                 onMouseLeave={() => setIsServicesOpen(false)}
                                             >
@@ -194,7 +194,7 @@ const Header = () => {
                                                         <Link
                                                             key={service.id}
                                                             to={`/services#${service.id}`}
-                                                            className="text-sm text-gray-800 hover:text-red-600 transition-colors font-medium"
+                                                            className="text-sm text-gray-800 hover:text-primary transition-colors font-medium"
                                                         >
                                                             {service.name}
                                                         </Link>
@@ -206,7 +206,7 @@ const Header = () => {
                                 ) : (
                                     <Link
                                         to={link.path}
-                                        className="text-red-600 hover:text-red-300 font-bold transition-colors duration-200 text-xs uppercase tracking-wide flex items-center h-full"
+                                        className="text-primary hover:text-accent font-bold transition-colors duration-200 text-xs uppercase tracking-wide flex items-center h-full"
                                     >
                                         {link.name}
                                     </Link>
@@ -220,7 +220,7 @@ const Header = () => {
                         <a href="tel:1800121911911"
                             className="flex flex-col items-end group whitespace-nowrap">
                             <span className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">24/7 Emergency</span>
-                            <div className="flex items-center bg-primary group-hover:bg-primary-dark text-white px-5 py-1 rounded-full font-bold transition-all duration-200 shadow-md">
+                            <div className="flex items-center bg-emergency group-hover:bg-red-700 text-white px-5 py-1 rounded-full font-bold transition-all duration-200 shadow-md">
                                 <Phone className="h-4 w-4 mr-2 animate-pulse" />
                                 1800-121-911-911
                             </div>
@@ -230,13 +230,13 @@ const Header = () => {
                     {/* Mobile Controls (CTA Only) */}
                     <div className="xl:hidden flex items-center">
                         <a href="tel:1800121911911"
-                            className="flex items-center justify-center bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary-dark transition-colors"
+                            className="flex items-center justify-center bg-emergency text-white p-2 rounded-full shadow-md hover:bg-red-700 transition-colors"
                             aria-label="Call Emergency"
                         >
                             <Phone className="h-5 w-5 animate-pulse" />
                         </a>
                         <button
-                            className="ml-4 p-2 text-gray-600 hover:text-red-600 focus:outline-none"
+                            className="ml-4 p-2 text-gray-600 hover:text-primary focus:outline-none"
                             onClick={toggleMenu}
                             aria-label="Toggle Menu"
                         >
@@ -256,7 +256,7 @@ const Header = () => {
                                     <>
                                         <button
                                             onClick={() => toggleMobileExpand(link.name)}
-                                            className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-red-50 focus:outline-none"
+                                            className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-blue-50 focus:outline-none"
                                         >
                                             {link.name}
                                             <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${mobileExpanded[link.name] ? 'transform rotate-180' : ''}`} />
@@ -273,7 +273,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={city}
                                                                         to={`/presence/india/${city.toLowerCase()}`}
-                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        className="text-sm text-gray-600 hover:text-primary block"
                                                                         onClick={() => setIsMenuOpen(false)}
                                                                     >
                                                                         {city}
@@ -289,7 +289,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={country}
                                                                         to={`/presence/international/${country.toLowerCase()}`}
-                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        className="text-sm text-gray-600 hover:text-primary block"
                                                                         onClick={() => setIsMenuOpen(false)}
                                                                     >
                                                                         {country}
@@ -305,7 +305,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={place}
                                                                         to={`/presence/medical-escort/${place.toLowerCase()}`}
-                                                                        className="text-sm text-gray-600 hover:text-red-600 block"
+                                                                        className="text-sm text-gray-600 hover:text-primary block"
                                                                         onClick={() => setIsMenuOpen(false)}
                                                                     >
                                                                         {place}
@@ -321,7 +321,7 @@ const Header = () => {
                                                             <Link
                                                                 key={service.id}
                                                                 to={`/services#${service.id}`}
-                                                                className="block text-sm text-gray-600 hover:text-red-600 py-1"
+                                                                className="block text-sm text-gray-600 hover:text-primary py-1"
                                                                 onClick={() => setIsMenuOpen(false)}
                                                             >
                                                                 {service.name}
@@ -335,7 +335,7 @@ const Header = () => {
                                 ) : (
                                     <Link
                                         to={link.path}
-                                        className="block px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-red-50"
+                                        className="block px-4 py-3 rounded-lg text-lg font-medium text-secondary hover:text-primary hover:bg-blue-50"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {link.name}
@@ -345,7 +345,7 @@ const Header = () => {
                         ))}
                         <a
                             href="tel:1800121911911"
-                            className="block w-full text-center mt-8 bg-primary text-white px-4 py-4 rounded-xl font-bold text-lg shadow-lg"
+                            className="block w-full text-center mt-8 bg-emergency text-white px-4 py-4 rounded-xl font-bold text-lg shadow-lg"
                         >
                             EMERGENCY: 1800-121-911-911
                         </a>

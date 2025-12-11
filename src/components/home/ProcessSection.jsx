@@ -34,7 +34,7 @@ const ProcessSection = () => {
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">How We Work</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">How We Work</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">A streamlined process to ensure rapid and safe medical transport.</p>
                 </div>
 
@@ -47,7 +47,7 @@ const ProcessSection = () => {
                             <div key={index} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                                 <div className="lg:w-1/2 flex justify-center lg:justify-end px-8">
                                     <div className={`lg:w-full lg:max-w-md ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'} text-center lg:text-left`}>
-                                        <h3 className="text-xl font-bold text-secondary-dark mb-3">{step.title}</h3>
+                                        <h3 className="text-xl font-bold text-primary mb-3">{step.title}</h3>
                                         <p className="text-gray-600 leading-relaxed">{step.description}</p>
                                     </div>
                                 </div>

@@ -59,7 +59,7 @@ const Fleet = () => {
 
     return (
         <div className="bg-gray-50 min-h-screen">
-            <div className="bg-secondary-dark text-white py-20">
+            <div className="bg-primary text-white py-20">
                 <div className="container mx-auto px-4">
                     <Link to="/" className="inline-flex items-center text-gray-400 hover:text-white mb-6 transition-colors">
                         <ArrowLeft className="h-4 w-4 mr-2" /> Back to Home
@@ -82,7 +82,7 @@ const Fleet = () => {
                                 </div>
                                 <div className="p-8 lg:p-12">
                                     <div className="flex items-center justify-between mb-4">
-                                        <h2 className="text-3xl font-bold text-secondary-dark">{aircraft.name}</h2>
+                                        <h2 className="text-3xl font-bold text-primary">{aircraft.name}</h2>
                                         <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wide">{aircraft.type}</span>
                                     </div>
                                     <p className="text-gray-600 mb-8 leading-relaxed">
@@ -91,7 +91,7 @@ const Fleet = () => {
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div>
-                                            <h3 className="text-lg font-bold text-secondary mb-4 border-b border-gray-100 pb-2">Specifications</h3>
+                                            <h3 className="text-lg font-bold text-primary mb-4 border-b border-gray-100 pb-2">Specifications</h3>
                                             <ul className="space-y-2 text-gray-600">
                                                 <li className="flex justify-between"><span>Range:</span> <span className="font-semibold">{aircraft.specs.range}</span></li>
                                                 <li className="flex justify-between"><span>Speed:</span> <span className="font-semibold">{aircraft.specs.speed}</span></li>
@@ -100,7 +100,7 @@ const Fleet = () => {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-secondary mb-4 border-b border-gray-100 pb-2">Medical Capacity</h3>
+                                            <h3 className="text-lg font-bold text-primary mb-4 border-b border-gray-100 pb-2">Medical Capacity</h3>
                                             <ul className="space-y-2 text-gray-600">
                                                 <li className="flex justify-between"><span>Stretcher:</span> <span className="font-semibold">{aircraft.capacity.stretcher}</span></li>
                                                 <li className="flex justify-between"><span>Medical Team:</span> <span className="font-semibold">{aircraft.capacity.medicalTeam}</span></li>

@@ -11,12 +11,12 @@ const TestimonialsSection = () => {
         {
             name: "Tushar Roy",
             date: "2024-10-03",
-            text: "My mother was in critical condition and we needed to shift her from Purnea, Bihar to Bangalore, Karnataka. It seemed impossible but Red Air Guardian team provided us with impeccable support and service because of which we were able to shift her in less than 7 hours. Thank you Red Air. Forever Grateful."
+            text: "My mother was in critical condition and we needed to shift her from Purnea, Bihar to Bangalore, Karnataka. It seemed impossible but Fly Medical Ambulance team provided us with impeccable support and service because of which we were able to shift her in less than 7 hours. Thank you Fly Medical. Forever Grateful."
         },
         {
             name: "Sudip Hazra",
             date: "2024-09-07",
-            text: "RED Air Guardian exceeded all expectations with their fast, professional, and compassionate service. The response time was incredible, and the medical team provided expert care throughout the flight. Their attention to detail and clear communication made a stressful situation much more manageable."
+            text: "Fly Medical Ambulance exceeded all expectations with their fast, professional, and compassionate service. The response time was incredible, and the medical team provided expert care throughout the flight. Their attention to detail and clear communication made a stressful situation much more manageable."
         }
     ];
 
@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">Why Trust RED Air Ambulance?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Trust Fly Medical Ambulance?</h2>
                     <div className="flex justify-center items-center space-x-2 mb-4">
                         <div className="flex text-yellow-400">
                             {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="h-5 w-5" />)}
@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
                             </div>
                             <p className="text-gray-600 mb-6 italic line-clamp-6">"{review.text}"</p>
                             <div className="mt-auto">
-                                <h4 className="font-bold text-secondary-dark">{review.name}</h4>
+                                <h4 className="font-bold text-primary">{review.name}</h4>
                                 <span className="text-xs text-gray-400">{review.date}</span>
                             </div>
                         </div>

@@ -4,9 +4,17 @@
 
 @layer base {
   body {
-    @apply font-sans text-slate-800 bg-white;
+    @apply font-sans bg-white;
+    color: theme('colors.charcoal');
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-secondary-dark;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    color: theme('colors.charcoal');
   }
 }

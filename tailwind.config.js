@@ -8,16 +8,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#DC2626', // Red-600
-          dark: '#B91C1C',    // Red-700
-          light: '#EF4444',   // Red-500
+          DEFAULT: '#0052A0', // Medical Blue
+          dark: '#003d7a',    // Darker Medical Blue
+          light: '#3373b3',   // Lighter Medical Blue
         },
         secondary: {
-          DEFAULT: '#1E293B', // Slate-800 (Navy-ish)
-          dark: '#0F172A',    // Slate-900
-          light: '#334155',   // Slate-700
+          DEFAULT: '#FFFFFF', // White
+          dark: '#f0f0f0',    // Off-white for subtle contrast
+          light: '#ffffff',
         },
-        accent: '#F8FAFC',    // Slate-50
+        accent: '#4FC3F7',    // Sky Blue
+        emergency: '#D00000', // Emergency Red
+        charcoal: '#2E2E2E',   // Charcoal Grey
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -117,7 +117,7 @@ const Services = () => {
     return (
         <div className="bg-gray-50 min-h-screen">
             {/* Page Header */}
-            <div className="bg-secondary-dark text-white py-20">
+            <div className="bg-primary text-white py-20">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">Comprehensive medical transport solutions tailored to your specific needs.</p>
@@ -131,10 +131,10 @@ const Services = () => {
                         <div id={service.id} key={service.id} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center scroll-mt-28`}>
                             <div className="lg:w-1/2">
                                 <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary">
-                                    <div className="mb-6 bg-red-50 w-20 h-20 rounded-full flex items-center justify-center">
+                                    <div className="mb-6 bg-blue-50 w-20 h-20 rounded-full flex items-center justify-center">
                                         {service.icon}
                                     </div>
-                                    <h2 className="text-3xl font-bold mb-4 text-secondary-dark">{service.title}</h2>
+                                    <h2 className="text-3xl font-bold mb-4 text-primary">{service.title}</h2>
                                     <p className="text-gray-600 text-lg mb-6 leading-relaxed">{service.description}</p>
                                     <ul className="space-y-3">
                                         {service.features.map((feature, idx) => (
@@ -160,7 +160,7 @@ const Services = () => {
             {/* FAQ Section */}
             <div className="bg-white py-20">
                 <div className="container mx-auto px-4 max-w-3xl">
-                    <h2 className="text-3xl font-bold text-center mb-12 text-secondary-dark">Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold text-center mb-12 text-primary">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -168,7 +168,7 @@ const Services = () => {
                                     className="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition-colors text-left"
                                     onClick={() => toggleFaq(index)}
                                 >
-                                    <span className="font-bold text-lg text-secondary-dark">{faq.question}</span>
+                                    <span className="font-bold text-lg text-primary">{faq.question}</span>
                                     {openFaq === index ? <ChevronUp className="h-5 w-5 text-primary" /> : <ChevronDown className="h-5 w-5 text-gray-400" />}
                                 </button>
                                 {openFaq === index && (
